@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-var routes = require('./api/routes/questionRoutes');
+var routes = require('./api/routes/globalRoutes');
 routes(app);
 
 app.use(function(req, res) {
