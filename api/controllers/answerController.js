@@ -4,11 +4,7 @@ var mongoose = require('mongoose');
 var Answer = mongoose.model('Answer');
 
 exports.get_all = function(req, res) {
-  // const search = req.query.search;
-  // console.log(req.params.questionId);
   const {questionId} = req.params;
-  // console.log(_id);
-  // return;
   Answer.find({questionId:questionId}, function(err, result) {
     if (err){
       res.send(err);
